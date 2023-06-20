@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="grid">
+
+        <div class="col-12 titulo">
+            <span id="titulo">Chooose a planet/structure</span>
+        </div>
+
+        <div class="col-12 lg:col-3 planet">
+            <img id="sun" src="../../../assets/planets/sun.png" title="Sun">
+            <img id="sub-planet" src="../../../assets/planets/sun_station.png" title="Sun Station"
+                (click)="redirectById('sunstation')">
+        </div>
+
+        <div class="col-12 lg:col-1 planet">
+            <img src="../../../assets/planets/ahs_twin.png" title="Ash Twin" (click)="redirectById('ashtwin')">
+        </div>
+
+        <div class="col-12 lg:col-1 planet">
+            <img src="../../../assets/planets/ember_twin.png" title="Ember Twin" (click)="redirectById('embertwin')">
+            <img id="sub-planet" src="../../../assets/planets/quantum_moon.png" title="The Quantum Moon"
+                (click)="redirectById('quantummoon')">
+        </div>
+
+        <div class="col-12 lg:col-1 planet">
+            <img style="margin-top: 75px;" src="../../../assets/planets/timber_hearth.png" title="Timber Hearth"
+                (click)="redirectById('timberhearth')">
+            <img id="sub-planet" src="../../../assets/planets/atterlock.png" title="The Atterlock"
+                (click)="redirectById('atterlock')">
+        </div>
+
+        <div class="col-12 lg:col-1 planet">
+            <img style="margin-top: 75px;" src="../../../assets/planets/brittle_hollow.png" title="Brittle Hollow"
+                (click)="redirectById('brittlehollow')">
+            <img id="sub-planet" src="../../../assets/planets/hollows_lantern.png" title="Hollow's Lantern"
+                (click)="redirectById('hollowslantern')">
+        </div>
+
+        <div class="col-12 lg:col-2 planet">
+            <img style="margin-top: 75px;" src="../../../assets/planets/giants_deep.png" title="Giant's Deep"
+                (click)="redirectById('giantsdeep')">
+            <img id="sub-planet" src="../../../assets/planets/opc.png" title="Obital Probe Cannon"
+                (click)="redirectById('opc')">
+        </div>
+
+        <div class="col-12 lg:col-2 planet">
+            <img src="../../../assets/planets/dark_bramble.png" title="Dark Bramble"
+                (click)="redirectById('darkbramble')">
+                <img id="sub-planet" style="width: 240px; margin-left: 10px" src="../../../assets/planets/whs.png" title="White Hole Station"
+                (click)="redirectById('whs')">
+        </div>
+
+        <div class="col-12 lg:col-1 planet">
+            <img style="margin-bottom: 390px; rotate: -0.05turn;" src="../../../assets/planets/interloper.png"
+                title="The Interloper" (click)="redirectById('interloper')">
+        </div>
+
+    </div>
+
+    <div class="config-container" style="margin-left: 20px;" (click)="redirectById('general')">
+        <div style="font-size: 24px;">General configs</div>
+    </div>
+
+    <div class="col-12 flex flex-row justify-content-end" style="position: absolute; top: 90%; right: 1.5%;">
+        <input type="button" (click)="download()"
+            style="background-color: #ffc106; width: 10%; color: black; cursor: pointer;" value="Download Save">
+    </div>
+
+</div>

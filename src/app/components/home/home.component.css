@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+}
+
+.grid {
+    position: absolute;
+    top: 15%;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.planet img{
+    width: 100%;
+}
+
+.planet  img:not(#sun):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: 0.7s;
+}
+
+#sub-planet {
+    width: 80px;
+    margin-left: 80px;
+}
+
+.config-container {
+    cursor: pointer;
+}

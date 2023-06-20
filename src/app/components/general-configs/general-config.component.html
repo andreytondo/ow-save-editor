@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="grid">
+
+        <div class="col-12">
+            <span style="font-size: 28px; cursor: pointer;" (click)="goBack()"> <- Go back</span>
+        </div>
+
+        <div class="col-12 flex flex-row justify-content-center">
+            <span style="font-size: 48px;">General configs</span>
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Loop count: </span>
+            <input type="text" [(ngModel)]="save.loopCount" [value]="save.loopCount">
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Last death type: </span>
+            <input type="text" [(ngModel)]="save.lastDeathType" [value]="save.lastDeathType">
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Burned marshmallows eaten: </span>
+            <input type="text" [(ngModel)]="save.burnedMarshmallowEaten" [value]="save.burnedMarshmallowEaten">
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Full time loops: </span>
+            <input type="text" [(ngModel)]="save.fullTimeloops" [value]="save.fullTimeloops">
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Perfect marshmallows eaten: </span>
+            <input type="text" [(ngModel)]="save.perfectMarshmallowsEaten" [value]="save.perfectMarshmallowsEaten">
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Warped to the eye: </span>
+            <input type="text" [(ngModel)]="save.warpedToTheEye" [value]="save.warpedToTheEye">
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Seconds remaining on warp: </span>
+            <input type="text" [(ngModel)]="save.secondsRemainingOnWarp" [value]="save.secondsRemainingOnWarp">
+        </div>
+
+        <div class="col-3">
+            <span style="font-size: 22px;">Loop count on paradox: </span>
+            <input type="text" [(ngModel)]="save.loopCountOnParadox" [value]="save.loopCountOnParadox">
+        </div>
+
+        <div class="col-12 flex flex-row justify-content-center mt-4" style="gap: 8px">
+
+            <input type="button" style="background-color: #ffc106; width: 10%; color: black; cursor: pointer;"
+                value="Discover all frequencies" (click)="getAllFrequencies()">
+
+            <input type="button" style="background-color: #ffc106; width: 10%; color: black; cursor: pointer;"
+                value="Discover all signals" (click)="getAllSignals()">
+
+        </div>
+
+        <div class="col-4" *ngFor="let save of dictSaves">
+            <span style="font-size: 22px;">{{save.label | titlecase}}: </span>
+            <input type="text" [(ngModel)]="save.value" [value]="save.value">
+        </div>
+
+    </div>
+</div>

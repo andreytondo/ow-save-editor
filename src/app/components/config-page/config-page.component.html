@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="grid">
+
+        <div class="col-12">
+            <span style="font-size: 28px; cursor: pointer;" (click)="goBack()"> <- Go back</span>
+        </div>
+
+        <div class="col-12 flex flex-row justify-content-center">
+            <span style="font-size: 48px;">{{title}}</span>
+        </div>
+
+        <div class="col-4 inputs" *ngFor="let config of configs; let index = index">
+
+            <div class="input">
+                <span style="font-size: 22px;">ID: {{config.id}}</span> <br>
+
+                <span style="font-size: 22px;">Reveal order: </span> <input type="number"
+                    [(ngModel)]="configs[index].revealOrder" [value]="config.revealOrder"><br>
+
+                <!-- <span style="font-size: 22px;">Read: </span> <input type="text" [(ngModel)]="configs[index].read"
+                    [value]="config.read"><br> -->
+
+                <span style="font-size: 22px;">Read: </span>
+                <select name="read" [(ngModel)]="configs[index].read">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select> <br>
+
+                <!-- <input type="text"
+                        [(ngModel)]="configs[index].newlyRevealed" [value]="config.newlyRevealed"><br> -->
+
+                <span style="font-size: 22px;">Newly revealed: </span>
+                <select name="read" [(ngModel)]="configs[index].newlyRevealed">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select> <br>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-12 flex flex-row justify-content-end">
+            <input type="button" (click)="saveConfig()" style="background-color: #ffc106; width: 10%; color: black;"
+                value="Save">
+        </div>
+
+    </div>
+
+</div>
