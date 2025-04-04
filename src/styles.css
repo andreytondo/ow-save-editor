@@ -1,52 +1,83 @@
-@import url('./assets//reset.css');
-@import url('../node_modules/primeflex/primeflex.css');
 @import url('https://fonts.cdnfonts.com/css/brandon-grotesque-regular');
 
+html,
 body {
-    background-image: url('./assets/planets/stars.jpg');
-    font-family: 'Brandon Grotesque Black', sans-serif;
-    overflow-x: hidden;
-    color: white;
+    height: 97vh;
 }
 
-.titulo {
-    margin-left: 40%;
-    width: fit-content;
+body {
+    /* font-family: 'Brandon Grotesque Black', sans-serif; */
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    background-color: rgb(16, 16, 16) !important;
+    color: rgba(255, 255, 255, 0.451);
 }
 
-#titulo {
-    font-size: 64px;
+.orbit,
+[class*="orbit-"] {
+    border: 0.1px solid rgba(255, 255, 255, 0.422);
 }
 
-.center-div{
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    height: 50%; 
-    width: 100%;
+.invisible {
+    border: none !important;
 }
 
-input, select {
-    box-sizing: border-box;
-    display: block;
-    width: 80%;
-    border: 3px solid #ffc106;
-    padding: 8px 8px;
-    color: white;
-    background: transparent;
-    border-radius: 4px;
+.vector {
+    background-color: rgba(255, 255, 255, 0.259);
+    height: 0.1px;
 }
 
-option {
-    color: black;
+.visible {
+    background-color: white;
+    border: none;
 }
 
-.container {
-    margin: 10px 20px;
-    height: 100%;
-    overflow: hidden;
+.rotate-orbit {
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.inputs {
-    margin: 20px 0 20px;
+.rotate-time-1 {
+    animation-duration: 10s;
+}
+
+.rotate-time-2 {
+    animation-duration: 20s;
+}
+
+.rotate-time-3 {
+    animation-duration: 30s;
+}
+
+.rotate-time-4 {
+    animation-duration: 40s;
+}
+
+.invert {
+    animation-direction: reverse;
+}
+
+.interloper {
+    animation-name: ellipsis;
+}
+
+@keyframes rotation {
+    0% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+@keyframes ellipsis {
+    0% {
+        transform: rotate(0deg) translateX(calc(150px * 1.4))
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(calc(150px * 1.4))
+    }
 }
